@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+/*----------------------------------------
+	cursor
+----------------------------------------*/
+.cursor {
+    position: fixed;
+    top: -6px;
+    left: -6px;
+    width: 10px;
+    height: 10px;
+    background: var(--c-cursor);
+    border-radius: 50%;
+    z-index: 999999;
+    translate: 0 0;
+    transition: scale .3s, translate .2s linear;
+    pointer-events: none;
+}
+.cursor.clicked {
+    scale: 2.5;
+    background-color: var(--c-cursor-clicked);
+}

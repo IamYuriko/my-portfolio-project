@@ -1,0 +1,120 @@
+---
+import Layout from "../layouts/Layout.astro";
+import details from "../content/works-details.json";
+---
+
+<Layout title="Narita Yuriko">
+  <main class="main">
+    <div class="works">
+      {
+        details.map((detail) => (
+          <details name="work" class="work">
+            <summary class="work__item grid--col3 cursor-large">
+              <span class="work__url">{detail.siteurl}</span>
+              <span class="work__tools u-hide-sp">{detail.platform}</span>
+              <span class="work__year u-hide-sp">
+                {detail.year}
+                <span class="work__arrow u-hide-sp">↓</span>
+              </span>
+
+              <span class="work__tools-alternate u-hide u-show-flex-sp">
+                {detail.platform}
+                <span class="work__arrow-alternate">↓</span>
+              </span>
+            </summary>
+
+            <div class="work__contents">
+              <div class="work__gallery grid--col2">
+                {detail.gallery.map((gallery) => (
+                  <img
+                    src={gallery}
+                    class="work__gallery-img"
+                    alt="掲載サイトのイメージ写真"
+                  />
+                ))}
+              </div>
+
+              <div class="u-mt-xl grid--col3">
+                <section class="">
+                  <h4 class="u-heading">Designed by</h4>
+                  {detail.designer.map((designer) => (
+                    <p class="work__desc">
+                      <a
+                        href={designer.url}
+                        target="_blank"
+                        class="cursor-large"
+                      >
+                        {designer.designer}
+                      </a>
+                    </p>
+                  ))}
+                </section>
+
+                <section class="work__coder">
+                  <h4 class="u-heading">Coded by</h4>
+                  <p class="work__desc">{detail.coder}</p>
+                </section>
+              </div>
+
+              <section class="grid--col3 u-mt-l">
+                <h4 class="u-heading">Purpose</h4>
+                <p class="work__desc">{detail.purpose}</p>
+              </section>
+
+              <section class="u-mt-l">
+                <h4 class="u-heading">key points</h4>
+                <ul>
+                  {detail.keypoints.map((keypoint) => (
+                    <li class="u-list-style-circle">{keypoint}</li>
+                  ))}
+                </ul>
+              </section>
+
+              <section class="u-mt-l">
+                <h4 class="u-heading">improvement</h4>
+                <ul>
+                  {detail.improvements.map((improvement) => (
+                    <li class="u-list-style-circle">{improvement}</li>
+                  ))}
+                </ul>
+              </section>
+
+              <section class="u-hide u-show-sp u-mt-l">
+                <h4 class="u-heading">year</h4>
+                <p>{detail.year}</p>
+              </section>
+
+              <div class="grid--col3 u-mt-l">
+                <section>
+                  <h4 class="u-heading">skills</h4>
+                  <p>{detail.skills}</p>
+                </section>
+
+                <section class="work__links">
+                  <h4 class="u-heading">links</h4>
+                  <ul>
+                    {detail.links.map((link) => (
+                      <li>
+                        <a
+                          href={link.link}
+                          target="_blank"
+                          class="cursor-large"
+                        >
+                          {link.text}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </section>
+              </div>
+            </div>
+          </details>
+        ))
+      }
+    </div>
+
+    <div class="work__hovering u-hide-tb">
+      <img src="" alt="" id="hovering" class="work__hovering-img" />
+    </div>
+  </main>
+</Layout>
