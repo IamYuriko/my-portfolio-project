@@ -1,0 +1,42 @@
+@charset "UTF-8";
+
+/*----------------------------------------
+	loading
+----------------------------------------*/
+.loading {
+    position: fixed;
+    inset: 0;
+    background-color: var(--c-black);
+    z-index: 99999999999999999;
+    display: grid;
+    place-content: center;
+    animation: loading-screen 1.5s 2.5s forwards;
+}
+@keyframes loading-screen {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+.loading__logo {
+    opacity: 0;
+    width: 4rem;
+    animation: loading-logo 2s .5s forwards;
+} 
+@keyframes loading-logo {
+    0% {
+        opacity: 0;
+        translate: 0 20px;
+    }
+    50% {
+        opacity: 1;
+        translate: 0 0;
+    }
+    100% {
+        opacity: 0;
+        translate: 0 0;
+    }
+}

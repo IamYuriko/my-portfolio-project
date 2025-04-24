@@ -1,0 +1,18 @@
+@charset "UTF-8";
+
+/* nav
+----------------------------------------*/
+.nav {
+    align-items: center;
+}
+.nav__btn {
+    color: var(--c-black);
+    width: fit-content;
+    height: fit-content;
+}
+.nav__works {
+    grid-column: 4;
+}
+.nav__tools, .nav__year {
+    text-transform: uppercase;
+}

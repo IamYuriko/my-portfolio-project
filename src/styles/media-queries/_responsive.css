@@ -1,0 +1,121 @@
+@charset "UTF-8";
+
+@media (width < 960px) {
+    /* nav
+    ----------------------------------------*/
+    .nav {
+        grid-template-columns: repeat(3, 1fr);
+        grid-row-gap: var(--spacing-m);
+        margin-bottom: 0;
+    }
+    .nav__name {
+        white-space: nowrap;
+    } 
+    .nav__btn {
+        grid-column: 3;
+        justify-self: end;
+    }
+    .nav__works {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    /* info panel
+    ----------------------------------------*/
+    .infoPanel {
+        width: 100vw;
+        height: auto;
+        border-bottom: var(--border-black);
+    }
+    .infoPanel__inner {
+        padding-bottom: var(--spacing-m);
+    }
+
+    /* works
+    ----------------------------------------*/
+    .works {
+        width: inherit;
+    }
+    .work {
+        max-height: 75svh;
+    }
+    .work[open] .work__contents {
+        padding: var(--spacing-m) var(--spacing-m) var(--spacing-l);
+    }
+    .work__hovering {
+        top: 10vh;
+        right: 1rem;
+        width: 50%;
+        z-index: 2;
+    }
+
+    /* footer
+    ----------------------------------------*/    
+    .footer {
+        white-space: nowrap;
+    }
+    .footer__time {
+        grid-column: 3 / 5;
+        text-align: center;
+    }
+    .footer__copyright {
+        text-align: end;
+    }
+}
+
+@media (width < 501px) {
+    /* nav
+    ----------------------------------------*/
+    .nav {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, auto);
+    }
+    .nav__btn {
+        grid-column: 2;
+    }
+    .nav__tools {
+        grid-column: 2;
+    }
+
+    /* info panel
+    ----------------------------------------*/
+    .infoPanel {
+        height: 100%;
+        border-bottom: none;
+    }
+    .infoPanel__intro {
+        overflow-y: auto;
+        height: 40svh;
+    }
+
+    /* works
+    ----------------------------------------*/
+    .work {
+        max-height: 70svh;
+    }
+    .work__item {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .work__tools-alternate {
+        grid-column: 2;
+        justify-content: space-between;
+    }
+    .work__gallery {
+        grid-template-columns: 1fr;
+        grid-row-gap: var(--spacing-m);
+    }
+}
+
+@media (width < 376px) {
+    /* info panel
+    ----------------------------------------*/
+    .infoPanel__intro {
+        max-height: 35svh;
+    }
+
+    /* works
+    ----------------------------------------*/
+    .work {
+        max-height: 57svh;
+    }
+}

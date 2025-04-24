@@ -1,0 +1,15 @@
+@charset "UTF-8";
+
+.grid--col2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: var(--spacing-m);
+}
+.grid--col3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+.grid--col6 {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+}

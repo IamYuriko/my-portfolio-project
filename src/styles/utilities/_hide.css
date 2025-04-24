@@ -1,0 +1,15 @@
+@charset "UTF-8";
+
+.u-hide {
+    display: none;
+}
+@media (width < 960px) {
+    .u-hide-tb {
+        display: none;
+    }
+}
+@media (501px > width) {
+    .u-hide-sp {
+        display: none;
+    }
+}

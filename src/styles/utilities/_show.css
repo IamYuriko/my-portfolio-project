@@ -1,0 +1,10 @@
+@charset "UTF-8";
+
+@media (501px > width) {
+    .u-show-sp {
+    display: block;
+    }
+    .u-show-flex-sp {
+    display: flex;
+    }
+}

@@ -1,0 +1,12 @@
+---
+import { Image } from "astro:assets";
+import logo from "../assets/logo.png";
+
+const {
+  src = logo,
+  alt = "ニコッと笑ったスマイルのロゴ画像",
+  className = "logo__img",
+} = Astro.props;
+---
+
+<Image src={src} alt={alt} class={className} />

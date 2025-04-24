@@ -1,0 +1,124 @@
+@charset "UTF-8";
+
+/*----------------------------------------
+	fonts
+----------------------------------------*/
+@font-face {
+    font-family: "OverusedGrotesk-Roman";
+    src: url("/fonts/OverusedGrotesk-Roman.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+/*----------------------------------------
+	variables
+----------------------------------------*/
+:root {
+    /* フォントサイズ */
+    --f-base: .75rem; /* 12px */
+
+    /* 行間 */
+    --lh-base: 1.7;
+
+    /* フォントファミリ */
+    --f-Grotesk: "OverusedGrotesk-Roman", "Open Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+
+    /* カラー */
+    --c-black: #1f1f1f;
+    --c-white: #fff;
+    --c-darkgrey: #808080;
+    --c-blue: #002BFF;
+    --c-lightblue: #f0f8ff;
+    --c-tp-blue: rgba(0, 43, 255, 0.5);
+
+    --c-bg: var(var(--c-white));
+    --c-txt: var(var(--c-black));
+    --c-heading: var(--c-darkgrey);
+
+    --c-cursor: var(--c-blue);
+    --c-cursor-clicked: var(--c-tp-blue);
+
+    --border-black: 1px solid var(--c-black);
+    --border-white: 1px solid var(--c-white);
+
+    --box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
+
+    /* スペース */
+    --spacing-xs: 0.625rem;
+    --spacing-s: .5rem;
+    --spacing-m: 1rem;
+    --spacing-l: 2rem;
+}
+
+/*----------------------------------------
+	base
+----------------------------------------*/
+body {
+    background-color: var(--c-bg);
+    color: var(--c-txt);
+    font-family: var(--f-Grotesk);
+    font-size: var(--f-base);
+    line-height: var(--lh-base);
+    overflow: hidden;
+    overflow-wrap: anywhere;
+    word-break: normal;
+    line-break: strict;
+}
+@media (prefers-color-scheme: dark) {
+    :root {
+        --c-bg: #171717;
+        --c-txt: #fff;
+        transition: 0.7s;
+    }
+    button {
+        color: var(--c-txt) !important;
+    }
+    .work {
+        border-bottom: var(--border-white) !important;
+    }
+    .work:first-child {
+        border-top: var(--border-white) !important;
+    }
+    .infoPanel {
+        background-color: var(--c-bg) !important;
+    }
+    .infoPanel__copy-email--success {
+        background-color: var(--c-txt) !important;
+        color:var(--c-bg) !important;
+    }
+    @media (width < 960px) {
+        .infoPanel {
+        border-bottom: var(--border-white) !important;
+        }
+    }
+}
+img {
+    max-width: 100%;
+    height: auto;
+    border: 0;
+    vertical-align: bottom;
+}
+ul, li {
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+    color: var(--c-text);
+    transition: var(--transition-pointer);
+}
+a:hover {
+    text-decoration: underline;
+}
+button {
+    transition: var(--transition-pointer);
+    text-transform: uppercase;
+}
+h1, h2, h3, h4 {
+    font-size: var(--f-base);
+    font-weight: normal;
+    text-transform: uppercase;
+}
+dt {
+    text-transform: uppercase;
+}

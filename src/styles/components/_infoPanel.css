@@ -1,0 +1,40 @@
+@charset "UTF-8";
+
+/* info panel
+----------------------------------------*/
+.infoPanel {
+    background-color: var(--c-white);
+    width: 45%;
+    height: auto;
+    position: fixed;
+    top: 2.275rem;
+    left: 0;
+    z-index: 10000;
+}
+.infoPanel__inner {
+    padding: 0 var(--spacing-m);
+}
+.infoPanel__btn {
+    grid-column: 7;
+}
+.infoPanel__heading {
+    grid-column: 1 / 4;
+}
+.infoPanel__text {
+    grid-column: 1 / 13;
+}
+.infoPanel__link {
+    margin-right: var(--spacing-xs);
+}
+.infoPanel__copy-email:hover {
+    text-decoration: underline;
+}
+.infoPanel__copy-email {
+    color: var(--c-black);
+}
+.infoPanel__copy-email--success {
+    width: fit-content;
+    background-color: var(--c-black);
+    color: var(--c-white);
+    padding: 0 var(--spacing-s);
+}

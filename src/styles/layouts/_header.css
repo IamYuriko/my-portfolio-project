@@ -1,0 +1,15 @@
+@charset "UTF-8";
+
+/*----------------------------------------
+	header
+----------------------------------------*/
+.header {
+  background-color: var(--c-bg);
+  width: 100vw;
+  height: auto;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  padding: var(--spacing-s) var(--spacing-m);
+}

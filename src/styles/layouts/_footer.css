@@ -1,0 +1,21 @@
+@charset "UTF-8";
+
+/*----------------------------------------
+	footer
+----------------------------------------*/
+.footer {
+    background-color: var(--c-bg);
+    width: 100vw;
+}
+.footer__list {
+    padding: var(--spacing-s) var(--spacing-m);
+}
+.footer__updatedDate {
+    grid-column: 1;
+}
+.footer__time {
+    grid-column: 4;
+}
+.footer__copyright {
+    grid-column: 6;
+}

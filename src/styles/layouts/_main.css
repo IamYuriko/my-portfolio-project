@@ -1,0 +1,13 @@
+@charset "UTF-8";
+
+/*----------------------------------------
+	main
+----------------------------------------*/
+.main {
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 0 var(--spacing-m);
+    background-color: var(--c-bg);
+    flex: 1;
+}
